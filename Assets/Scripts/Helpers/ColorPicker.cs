@@ -40,8 +40,10 @@ public class ColorPicker : MonoBehaviour
 
     public void SelectColor(Color color)
     {
-        for (int i = 0; i < AvailableColors.Length; ++i)
+        
+        for (int i = 3; i < AvailableColors.Length; ++i)
         {
+            Debug.Log("Available Color Amount1: " + AvailableColors.Length);
             if (AvailableColors[i] == color)
             {
                 m_ColorButtons[i].onClick.Invoke();

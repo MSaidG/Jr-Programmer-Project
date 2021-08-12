@@ -29,6 +29,7 @@ public class UserControl : MonoBehaviour
         {
             var ray = GameCamera.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
+
             if (Physics.Raycast(ray, out hit))
             {
                 //the collider could be children of the unit, so we make sure to check in the parent
@@ -42,10 +43,12 @@ public class UserControl : MonoBehaviour
                 UIMainScene.Instance.SetNewInfoContent(uiInfo);
             }
         }
-        else if (m_Selected != null && Input.GetMouseButtonDown(1))
-        {//right click give order to the unit
+        else if (m_Selected != null && Input.GetMouseButtonDown(1)) //right click give order to the unit
+        {
+
             var ray = GameCamera.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
+
             if (Physics.Raycast(ray, out hit))
             {
                 var building = hit.collider.GetComponentInParent<Building>();
