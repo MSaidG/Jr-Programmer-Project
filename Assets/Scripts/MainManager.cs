@@ -28,6 +28,7 @@ public class MainManager : MonoBehaviour
     {
         public Color teamColor;
     }
+
     public void SaveColor()
     {
         SaveData data = new SaveData();
